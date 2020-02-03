@@ -6,7 +6,7 @@
     <title>Ayush Kaushik</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" media="screen" href="css/index.css">
 </head>
 
@@ -18,49 +18,60 @@
                 <li><a href="">Home</a></li>
                 <li><a href="">Projects</a></li>
                 <li><a href="">Contact</a></li>
-                <li><a href="">Experience</a></li>
             </ul>
         </div>
     </header>
 
     <div class="home">
-        <span>Ayush Kaushik</span>
-        <!-- Add the text style thing here -->
-        <ul>
-            <li><a href=""><i class="fa fa-linkedin" style="font-size:48px;"></i></a></li>
-            <li><a href="test"><i class="fa fa-git" style="font-size:48px;"></i></a></li>
-        </ul>
+        <h1>Ayush Kaushik</h1>
+        <span class="typewrite" data-period="2000"
+            data-type='[ "I love to Code.", "I Love Design.", "I Love to Manage." ]'>
+            <span class="wrap"></span>
+        </span>
+        <!-- <ul>
+            <li><a href=""><i class="fa fa-linkedin-square" style="font-size:40px"></i></a></li>
+            <li><a href="test"><i class="fa fa-github" style="font-size:40px"></i>
+                    </i></a></li>
+        </ul> -->
     </div>
 
     <div class="project">
         <h1>Projects</h1>
-        <div>
-            <span>
-                Container Janitor
-            </span>
+        <h4>Here are some of the side-projects that I worked on.</h4>
+        <div class="project-card">
+            <h3>Container Janitor</h3>
+            <hr />
             <p>
                 The application cleans up the stopped docker containers and removes dangling images.
             </p>
-            <a href="">View Code</a>
+            <a href="https://github.com/Ayush-Kaushik/container-janitor"><i class="fa fa-globe"
+                    style="font-size:2.0vw"></i> View Code</a>
         </div>
-        <div>
-            <span>
-                Car Inventory Simulator
-            </span>
-            <p>
-                The application simulates a car inventory where user can manage different types of cars and move them
-                from one list to another.
-            </p>
-            <a href="">View Code</a>
+        <div class="project-card">
+            <div class="container">
+                <h3>Car Inventory Simulator</h3>
+                <hr />
+                <p>
+                    The application simulates a car inventory where user can manage different types of cars and move
+                    them
+                    from one list to another.
+                </p>
+                <a href="https://github.com/Ayush-Kaushik/Car-Inventory-Simulator"><i class="fa fa-globe"
+                        style="font-size:2.0vw"></i> View Code</a>
+            </div>
         </div>
-        <div>
-            <span>
-                Luhn Algorithm Validator
-            </span>
-            <p>
-                Simple terminal based application that detects if a credit card is valid.
-            </p>
-            <a href="">View Code</a>
+
+        <div class="project-card">
+            <div class="container">
+                <h3> Luhn Algorithm Validator</h3>
+                <hr />
+                <p>
+                    Simple terminal based application that detects if a credit card is valid.
+                </p>
+                <a href="https://github.com/Ayush-Kaushik/luhn-algorithm"><i class="fa fa-globe"
+                        style="font-size:2.0vw"></i> View Code</a>
+            </div>
+
         </div>
         <div></div>
     </div>

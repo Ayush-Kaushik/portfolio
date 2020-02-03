@@ -1,3 +1,8 @@
+body {
+    font-family: "Inconsolata","SFMono-Regular",Consolas,"Liberation Mono",Menlo,Monaco,"Courier New",monospace;
+    margin: 0 0;
+}
+
 .header-nav{
     top: 0;
     width: 100%;
@@ -15,24 +20,56 @@
     justify-content: flex-start;
     align-items: center;  
     list-style-type: none;
-
 }
 
 .header-nav li {
-    padding: 2vw;
+    padding: 1.0vw;
 }
 
 .header-nav a {
-    font-size: 2vw;
+    font-size: 1.5vw;
+    text-decoration: none;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.home ul {
+    list-style-type: none;
+}
+
+.home li {
+    padding: 2vw;
+}
+
+.home a {
     text-decoration: none;
 }
 
 .project{
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
-.project h1 {
-    text-align: center;
+.project h4 {
+    color: #828282;
+    font-weight: 100;
+}
+
+.project-card {
+    padding: 2vw;
+    margin: 2vw;
+}
+
+.project-card {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.project-card h3 {
+    font-weight: 300;
 }
 
