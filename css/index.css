@@ -1,8 +1,38 @@
-a {
-    color: #ffffff;
+.header-nav{
+    top: 0;
+    width: 100%;
+    position: fixed;
+    display: flex;
 }
 
-.navigation {
-    display: flex;
-    flex-direction: row;
+/* fill space */
+.header-nav span {
+    flex: 1 1 auto;
 }
+
+.header-nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;  
+    list-style-type: none;
+
+}
+
+.header-nav li {
+    padding: 2vw;
+}
+
+.header-nav a {
+    font-size: 2vw;
+    text-decoration: none;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+}
+
+.project h1 {
+    text-align: center;
+}
+
