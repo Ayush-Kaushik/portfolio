@@ -3,6 +3,18 @@ body {
     margin: 0 0;
 }
 
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 7em 0;
+    }
+}
+
+
+header {
+    padding: 7em 0;
+}
+
 .header-nav{
     top: 0;
     width: 100%;
@@ -52,7 +64,23 @@ body {
 .project{
     display: flex;
     flex-direction: column;
+}
+
+.project h1 {
     text-align: center;
+}
+
+.project h4 {
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-container a {
+    text-decoration: none;
 }
 
 .project h4 {
