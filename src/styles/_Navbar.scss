@@ -1,0 +1,17 @@
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+    margin-top: 40px;
+
+    li {
+      text-decoration: none;
+      margin: 5%;
+    }
+  }
+}
