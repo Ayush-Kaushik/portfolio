@@ -1,0 +1,12 @@
+@import "ProjectCard";
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  background: #f6f6f8;
+  padding-bottom: 5%;
+
+  h1 {
+    text-align: center;
+  }
+}
