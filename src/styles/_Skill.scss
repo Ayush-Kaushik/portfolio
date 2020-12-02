@@ -1,0 +1,18 @@
+.skill-container {
+  background: $backgroundColorSecondary;
+
+  h2 {
+    margin-left: 2%;
+  }
+}
+
+.skill-language {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  span {
+    margin: 5%;
+    text-align: center;
+  }
+}

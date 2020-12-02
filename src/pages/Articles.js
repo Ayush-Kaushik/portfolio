@@ -1,16 +1,19 @@
-import react, {useContext} from 'react';
+import {useContext} from 'react';
 import {ArticleContext} from "../context/ArticlesContext";
 import ArticleCard from "../components/ArticleCard";
+import {Element} from "react-scroll";
 
-const Articles = (props) => {
+const Articles = () => {
     const articleContext = useContext(ArticleContext);
 
     return (
-        <div className={"article-container"}>
-            <h1>{"Articles"}</h1>
-            {
-            articleContext.articles.map(article => <ArticleCard key={article.id} article={article}/>)
-        }</div>
+        <Element name={"articles"}>
+            <div className={"layout-page"}>
+                <h1>{"Articles"}</h1>
+                {
+                    articleContext.articles.map(article => <ArticleCard key={article.id} article={article}/>)
+                }</div>
+        </Element>
     )
 };
 

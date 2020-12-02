@@ -1,0 +1,26 @@
+.layout-footbar {
+  display: flex;
+  justify-content: flex-start;
+  background-color: $footerColor;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+
+    li {
+      list-style-type: none;
+      margin-bottom: 5%;
+
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        color: $footerLinkColor;
+      }
+
+      a:hover {
+        color: $footerColorHover;
+      }
+    }
+  }
+}

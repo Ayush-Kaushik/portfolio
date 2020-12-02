@@ -2,21 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
 import App from './App';
-// import './fontawesome';
 import reportWebVitals from './reportWebVitals';
 import {ProjectsProvider} from "./context/ProjectsContext";
 import {ArticleProvider} from "./context/ArticlesContext";
 import {UserProvider} from "./context/UserContext";
+import {FireStoreProvider} from "./context/FirestoreContext";
 
 ReactDOM.render(
     <React.StrictMode>
-        <UserProvider>
-            <ProjectsProvider>
-                <ArticleProvider>
-                    <App/>
-                </ArticleProvider>
-            </ProjectsProvider>
-        </UserProvider>
+        <FireStoreProvider>
+            <UserProvider>
+                <ProjectsProvider>
+                    <ArticleProvider>
+                        <App/>
+                    </ArticleProvider>
+                </ProjectsProvider>
+            </UserProvider>
+        </FireStoreProvider>
     </React.StrictMode>
     ,
     document.getElementById('root')

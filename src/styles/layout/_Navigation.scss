@@ -1,0 +1,40 @@
+.layout-navigation {
+  background-color: $footerColor;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+
+    li {
+      text-decoration: none;
+      margin-bottom: 5%;
+      margin-top: 5%;
+
+      @include sm {
+        font-size: $h1_sm - 10px;
+      }
+
+      @include md {
+        font-size: $h1_md;
+      }
+
+      @include lg {
+        font-size: $h1_lg;
+      }
+
+      a {
+        text-decoration: none;
+        color: $linkColorUnvisited;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      a:hover {
+        color: $linkColorHover;
+      }
+    }
+  }
+}
+

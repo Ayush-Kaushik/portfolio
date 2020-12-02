@@ -1,20 +1,45 @@
-@import "Project";
-@import "Article";
-@import "Footer";
-@import "Aboutme";
+$backgroundColorPrimary: #ffffff;
+$backgroundColorSecondary: #f6f6f8;
+$linkColorUnvisited: #09c5f1;
+$linkColorHover: #02667f;
+$footerColor: #42586b;
+$footerLinkColor: #ece9e9;
+$footerColorHover: #09c5f1;
+$iconColor: #000000;
+$titleColor: #4b4a4a;
+$subTitleColor: #666565;
+$subTitleColorSecondary: #979595;
+$callToActionColor: #000000;
 
-html {
+$h1_lg: 30px;
+$h1_md: 20px;
+$h1_sm: 15px;
+
+$h2_lg: 20px;
+$h2_md: 20px;
+$h2_sm: 15px;
+
+$screen-sm-min: 300px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+@import "mixins";
+@import "layout/Page";
+@import "layout/Card";
+@import "layout/Navigation";
+@import "layout/Footer";
+
+@import "Aboutme";
+@import "Project";
+@import "Experience";
+@import "Skill";
+@import "Contact";
+
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-
-  body {
-    margin: 0;
-    padding: 0;
-  }
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

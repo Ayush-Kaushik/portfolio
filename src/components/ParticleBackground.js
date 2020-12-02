@@ -1,35 +1,46 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Particles from "react-particles-js";
 
 const ParticleBackground = () => {
+    const [numParticles, setNumParticles] = useState(20);
+    const handleResize = () => {
+
+        const width = window.innerWidth;
+        let num_nb;
+        if(width > 500) {
+            num_nb = Math.round(Math.sqrt(width / 0.5));
+        } else {
+            num_nb = Math.round(Math.sqrt(width / 4));
+        }
+
+        setNumParticles(num_nb);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+
     return (
         <div
-            style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                overflowY: "hidden"
-            }}
+            className={"particle-background"}
         >
         <Particles
             params={{
                 particles: {
                     number: {
-                        value: 200
+                        value: numParticles
                     },
                     links: {
-                        color: "#000000",
+                        color: "#979595",
                         distance: 100,
                         enable: true,
                         opacity: 0.5,
-                        width: 1
+                        width: 2
                     },
                     shape: {
                         type: "circle",
                         stroke: {
-                            width: 10,
-                            color: "#000000"
+                            width: 2,
+                            color: "#979595"
                         }
                     },
                     opacity: {
@@ -66,7 +77,7 @@ const ParticleBackground = () => {
                         random: false,
                         straight: false,
                         out_mode: "out",
-                        bounce: true,
+                        bounce: false,
                         attract: {
                             enable: false,
                             rotateX: 600,
@@ -77,32 +88,25 @@ const ParticleBackground = () => {
                 interactivity: {
                     detect_on: "window",
                     events: {
-                        onhover: {
+                        onresize: {
                             enable: true,
-                            mode: "repulse"
-                        },
-                        resize: true
+                            density_auto: true,
+                            density_area: 400
+                        }
                     },
                     modes: {
                         grab: {
                             distance: 400,
                             line_linked: {
-                                opacity: 1
+                                opacity: 0.5
                             }
                         },
                         bubble: {
                             distance: 400,
-                            size: 40,
+                            size: 20,
                             duration: 2,
-                            opacity: 8,
+                            opacity: 3,
                             speed: 3
-                        },
-                        repulse: {
-                            distance: 100,
-                            duration: 0.4
-                        },
-                        push: {
-                            particles_nb: 4
                         },
                         remove: {
                             particles_nb: 2

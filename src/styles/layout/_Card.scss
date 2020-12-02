@@ -1,0 +1,115 @@
+.layout-card {
+  display: flex;
+  flex-direction: column;
+
+  @include sm {
+    margin-bottom: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+
+  @include md {
+    margin-bottom: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  @include lg {
+    margin-bottom: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  a {
+    text-decoration: none;
+    color: $linkColorUnvisited;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: #02667f;
+  }
+
+  .layout-card-img {
+    width: 100%;
+
+    @include sm {
+      img {
+        width: 60%;
+      }
+    }
+
+    @include md {
+      img {
+        width: 60%;
+      }
+    }
+
+    @include lg {
+      img {
+        width: 30%;
+      }
+    }
+  }
+
+  h1 {
+    text-align: left;
+    color: $titleColor;
+  }
+
+  @include sm {
+    h1 {
+      font-size: $h1_sm;
+    }
+
+    h2 {
+      font-size: $h2_sm;
+    }
+  }
+
+  @include md {
+    h1 {
+      font-size: $h1_md;
+    }
+
+    h2 {
+      font-size: $h2_md;
+    }
+  }
+
+  @include lg {
+    h1 {
+      font-size: $h1_lg;
+    }
+
+    h2 {
+      font-size: $h2_lg;
+    }
+  }
+
+  .layout-card-links {
+    a {
+      margin-right: 5%;
+      font-weight: normal;
+
+      @include sm {
+        font-size: $h1_sm - 5px;
+      }
+
+      @include md {
+        font-size: $h1_md - 5px;
+      }
+
+      @include lg {
+        font-size: $h1_lg - 15px;
+      }
+    }
+  }
+
+  .layout-card-subtitle {
+    font-weight: lighter;
+    color: $subTitleColor;
+    margin-bottom: 2%;
+  }
+}

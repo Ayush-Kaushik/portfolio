@@ -1,0 +1,26 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $backgroundColorSecondary;
+
+  input {
+    margin-bottom: 3%;
+    padding: 1%;
+    border-radius: 5px;
+  }
+
+  input:focus {
+    border-color: $footerColorHover;
+  }
+
+  div {
+    button{
+      color: $backgroundColorPrimary;
+      background-color: $footerColor;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+
+  }
+}

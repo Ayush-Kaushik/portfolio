@@ -1,0 +1,19 @@
+.experience-description {
+  font-weight: normal;
+
+  ul {
+    li {
+      @include sm {
+        margin-bottom: 5%;
+      }
+
+      @include md {
+        margin-bottom: 5%;
+      }
+
+      @include lg {
+        margin-bottom: 2%;
+      }
+    }
+  }
+}

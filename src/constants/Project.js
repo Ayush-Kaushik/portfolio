@@ -1,2 +1,8 @@
-export const TITLE = "Projects";
-export const DESCRIPTION = "I have been working on personal projects since the start of ";
+export const SHOW_PROJECTS = [
+    289579210,
+    287168767,
+    254787189,
+    234479379,
+    95316693,
+    94929836
+]

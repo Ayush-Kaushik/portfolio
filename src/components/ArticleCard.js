@@ -5,22 +5,21 @@ import {faHeart} from "@fortawesome/free-solid-svg-icons";
 
 const ArticleCard = ({article}) => {
     return (
-        <div className={"card-container"}>
-            <h2>{article.title}</h2>
-            <div className={"card-content"}>
-                <img src={article.social_image}/>
-
-                <span>
-                    <p> <FontAwesomeIcon
-                        className={"project-icon"}
-                        icon={faHeart}/>{"  " + article.positive_reactions_count}</p>
-                    <p>{article.description}
-                        </p>
-                    <p><a href={article.url}><FontAwesomeIcon className={"project-icon"}
-                                                              icon={faDev}
-                                                              size={"2x"}/> {"Read More"}</a></p>
-                </span>
+        <div className={"layout-card"}>
+            <h1>{article.title}</h1>
+            <div className={"layout-card-img"}>
+                <img src={article.social_image} alt={"article image"}/>
             </div>
+
+            <span className={"layout-card-links"}>
+                <p><FontAwesomeIcon
+                    className={"project-icon"}
+                    icon={faHeart}/>{"  " + article.positive_reactions_count}</p>
+                <p>{article.description}</p>
+                <a href={article.url}><FontAwesomeIcon className={"project-icon"}
+                                                          icon={faDev}
+                                                          size={"2x"}/> {"Read More"}</a>
+            </span>
         </div>
     )
 };

@@ -1,15 +1,25 @@
 import React from 'react';
-import '../styles/_Navbar.scss'
+import {Link} from "react-scroll";
 
 const Navbar = () => {
     return (
-        <div className={"navbar-container"}>
-            <nav className={"navbar"}>
-                <li>{"About Me"}</li>
-                <li>{"Skills"}</li>
-                <li>{"Projects"}</li>
-                <li>{"Contact Me"}</li>
-            </nav>
+        <div className={"layout-navigation"}>
+            <ul>
+                <li>
+                    <Link activeClass="active" to="projects" smooth={true} duration={1000}>{"Projects"}</Link>
+                </li>
+                <li>
+                    <Link activeClass="active" to="experience" spy={true} smooth={true}
+                          duration={1000}>{"Experience"}</Link>
+                </li>
+                <li>
+                    <Link activeClass="active" to="articles" spy={true} smooth={true}
+                          duration={2000}>{"Articles"}</Link>
+                </li>
+                <li>
+                    <a href={"/resume/AyushKaushik_Resume.pdf"} download>{"Resume"}</a>
+                </li>
+            </ul>
         </div>
     )
 }
