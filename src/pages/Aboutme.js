@@ -35,7 +35,6 @@ const Aboutme = () => {
                 </span>
                 <div className={"aboutme-img-container"}>
                     <img src={userContext.userInfo.avatar_url} alt={"my-image"}/>
-
                 </div>
             </div>
         </div>

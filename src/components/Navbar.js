@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-scroll";
+import {RESUME_LINK} from '../constants/MenuItems';
 
 const Navbar = () => {
     return (
@@ -17,12 +18,11 @@ const Navbar = () => {
                           duration={2000}>{"Articles"}</Link>
                 </li>
                 <li>
-                    <a href={"/resume/AyushKaushik_Resume.pdf"} download>{"Resume"}</a>
+                    <a href={RESUME_LINK} download>{"Resume"}</a>
                 </li>
             </ul>
         </div>
     )
 }
-
 
 export default Navbar;
