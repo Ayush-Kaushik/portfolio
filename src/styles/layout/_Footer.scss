@@ -1,16 +1,16 @@
-.layout-footbar {
+.layout-footer {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   background-color: $footerColor;
 
   ul {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     text-decoration: none;
 
     li {
       list-style-type: none;
-      margin-bottom: 5%;
+      margin-right: 2%;
 
       a {
         font-weight: bold;
@@ -22,5 +22,11 @@
         color: $footerColorHover;
       }
     }
+  }
+
+  div {
+    text-align: center;
+    font-weight: bold;
+    color: $footerLinkColor;
   }
 }
