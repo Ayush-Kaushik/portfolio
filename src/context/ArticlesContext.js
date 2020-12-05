@@ -5,10 +5,13 @@ export const ArticleContext = createContext(null);
 export const ArticleProvider = ({children}) => {
     const [articles, setArticles] = useState([]);
 
-    useEffect(async () => {
-        const response = await axios.get("https://dev.to/api/articles?username=ayushkaushik");
-        console.log(response.data);
-        setArticles(response.data);
+    useEffect( () => {
+          const getArticles = async() => {
+              const response = await axios.get(`https://dev.to/api/articles?username=ayushkaushik&state=fresh`);
+              setArticles(response.data);
+          }
+
+          getArticles();
     }, []);
 
     return (

@@ -5,10 +5,13 @@ export const UserContext = createContext();
 export const UserProvider = ({children}) => {
     const [userInfo, setUserInfo] = useState({});
 
-    useEffect(async () => {
-        const response = await axios.get("https://api.github.com/users/Ayush-Kaushik");
-        console.log(response.data);
-        setUserInfo(response.data);
+    useEffect( () => {
+        const getUserInfo = async () => {
+            const response = await axios.get("https://api.github.com/users/Ayush-Kaushik");
+            setUserInfo(response.data);
+        }
+
+        getUserInfo();
     }, []);
 
     return (
