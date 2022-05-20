@@ -12,10 +12,10 @@ const ProjectCard = ({project}) => {
 
             <span className={"layout-card-links"}>
                 {project.html_url ?
-                    <a href={project.html_url}> <FontAwesomeIcon className={"project-icon"}
+                    <a href={project.html_url} target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon className={"project-icon"}
                                                                  icon={faGithub} size={"2x"}/>{"  View Source"}
                     </a> : ""}
-                {project.homepage ? <a href={project.homepage}> <FontAwesomeIcon className={"project-icon"}
+                {project.homepage ? <a href={project.homepage} target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon className={"project-icon"}
                                                                                 icon={faExternalLinkAlt}
                                                                                 size={"2x"}/> {"Live Demo"}</a> : ""}
             </span>
