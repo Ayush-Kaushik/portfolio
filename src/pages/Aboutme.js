@@ -17,7 +17,7 @@ const Aboutme = () => {
             >
                 <span>
                         <h1>{"Hi!"}<Emoji symbol={"👋"} label={"wave"}/>{"    I'm Ayush Kaushik"}</h1>
-                        <h2>{"I'm a DevOps Developer @ Tekside.iO"}</h2>
+                        <h2>{"I'm a Software Engineer @ OpenText"}</h2>
                         <Link to="contact" smooth={true} duration={1000}>
                             <button id={"#cta"}>
                                 <h3>{"Let's Connect"}</h3>

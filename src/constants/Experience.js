@@ -54,5 +54,23 @@ export const EXPERIENCE = [
             "name": "Tekside.IO",
             "link": "https://www.tekside.io/"
         }
+    },
+    {
+        "workTitle": "DevOps Developer",
+        "description": [
+            "Introduced to YAML format for the first time when building deployment files",
+            "Learned and excelled Docker as a single node and Docker swarm",
+            "Understood different concepts such as containers, services, stacks, docker commands, network types and deployment files",
+            "Learned the concepts related to RabbitMQ and messaging queues in general",
+            "Learned how to build pipeline as workspaces, found some drawbacks in its use cases and switched to pipeline as code",
+            "Even pipeline as code per repository was not maintainable so learned how to use shared library and started setting up the pipeline infrastructure",
+            "Helped to bring drastic reduction in deployment times since everything that was done by shell scripting was handled by Jenkins pipeline"
+        ],
+        "timeline": "May 2020 - June 2021",
+        "image": "https://www.dropbox.com/s/82a1k6pz03lc9sy/c1f943_c965cd15c9e549d89685ae2c022e5ff2_mv2.png?raw=1",
+        "company": {
+            "name": "Tekside.IO",
+            "link": "https://www.tekside.io/"
+        }
     }
 ]

@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
-import Particles from "react-particles-js";
+import React, { useState } from 'react';
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 const ParticleBackground = () => {
     const [numParticles, setNumParticles] = useState(20);
@@ -7,7 +8,7 @@ const ParticleBackground = () => {
 
         const width = window.innerWidth;
         let num_nb;
-        if(width > 500) {
+        if (width > 500) {
             num_nb = Math.round(Math.sqrt(width / 0.5));
         } else {
             num_nb = Math.round(Math.sqrt(width / 4));
@@ -18,104 +19,95 @@ const ParticleBackground = () => {
 
     window.addEventListener("resize", handleResize);
 
+    const particlesInit = async (main) => {
+        await loadFull(main);
+    };
+
+    const particlesLoaded = (container) => {
+    };
+
 
     return (
         <div
             className={"particle-background"}
         >
-        <Particles
-            params={{
-                particles: {
-                    number: {
-                        value: numParticles
+            <Particles
+                id="tsparticles"
+                init={particlesInit}
+                loaded={particlesLoaded}
+                options={{
+                    background: {
+                        color: {
+                            value: "#ffffff",
+                        },
                     },
-                    links: {
-                        color: "#979595",
-                        distance: 100,
-                        enable: true,
-                        opacity: 0.5,
-                        width: 2
+                    fpsLimit: 120,
+                    interactivity: {
+                        events: {
+                            onClick: {
+                                enable: true,
+                                mode: "push",
+                            },
+                            onHover: {
+                                enable: true,
+                                mode: "repulse",
+                            },
+                            resize: true,
+                        },
+                        modes: {
+                            push: {
+                                quantity: 4,
+                            },
+                            repulse: {
+                                distance: 200,
+                                duration: 0.4,
+                            },
+                        },
                     },
-                    shape: {
-                        type: "circle",
-                        stroke: {
-                            width: 2,
-                            color: "#979595"
-                        }
-                    },
-                    opacity: {
-                        value: 0.4008530152163807,
-                        random: true,
-                        anim: {
-                            enable: false,
-                            speed: 1,
-                            opacity_min: 0.1,
-                            sync: true
-                        }
-                    },
-                    size: {
-                        value: 1.5,
-                        random: true,
-                        anim: {
-                            enable: false,
-                            speed: 40,
-                            size_min: 0.1,
-                            sync: false
-                        }
-                    },
-                    line_linked: {
-                        enable: true,
-                        distance: 1,
-                        color: "#ffffff",
-                        opacity: 0.3687847739990702,
-                        width: 0.6413648243462091
-                    },
-                    move: {
-                        enable: true,
-                        speed: 6,
-                        direction: "none",
-                        random: false,
-                        straight: false,
-                        out_mode: "out",
-                        bounce: false,
-                        attract: {
-                            enable: false,
-                            rotateX: 600,
-                            rotateY: 1200
-                        }
-                    }
-                },
-                interactivity: {
-                    detect_on: "window",
-                    events: {
-                        onresize: {
+                    particles: {
+                        color: {
+                            value: "#979595",
+                        },
+                        links: {
+                            color: "#979595",
+                            distance: 150,
                             enable: true,
-                            density_auto: true,
-                            density_area: 400
-                        }
+                            opacity: 0.4008530152163807,
+                            width: 1,
+                        },
+                        collisions: {
+                            enable: true,
+                        },
+                        move: {
+                            direction: "none",
+                            enable: true,
+                            outModes: {
+                                default: "bounce",
+                            },
+                            random: false,
+                            speed: 6,
+                            straight: false,
+                        },
+                        number: {
+                            density: {
+                                enable: true,
+                                area: 800,
+                            },
+                            value: numParticles,
+                        },
+                        opacity: {
+                            value: 0.5,
+                        },
+                        shape: {
+                            type: "circle",
+                        },
+                        size: {
+                            value: { min: 1, max: 5 },
+                        },
                     },
-                    modes: {
-                        grab: {
-                            distance: 400,
-                            line_linked: {
-                                opacity: 0.5
-                            }
-                        },
-                        bubble: {
-                            distance: 400,
-                            size: 20,
-                            duration: 2,
-                            opacity: 3,
-                            speed: 3
-                        },
-                        remove: {
-                            particles_nb: 2
-                        }
-                    }
-                },
-                retina_detect: true
-            }}
-        />
+                    detectRetina: true,
+                }}
+            />
         </div>
     )
 }
